@@ -48,7 +48,7 @@ sectionPagesMenu = "sect"
 		"layouts/partials/menu.html", `{{- $p := .page -}}
 {{- $m := .menu -}}
 {{ range (index $p.Site.Menus $m) -}}
-{{- .URL }}|{{ .Name }}|{{ .Weight -}}|
+{{- .URL }}|{{ .Name }}|{{ .Title }}|{{ .Weight -}}|
 {{- if $p.IsMenuCurrent $m . }}IsMenuCurrent{{ else }}-{{ end -}}|
 {{- if $p.HasMenuCurrent $m . }}HasMenuCurrent{{ else }}-{{ end -}}|
 {{- end -}}
